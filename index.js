@@ -1,4 +1,4 @@
-const url = 'http://ec2-54-146-137-250.compute-1.amazonaws.com:5000/predict?msg=';
+const url = 'https://ec2-54-146-137-250.compute-1.amazonaws.com:433/predict?msg=';
 
 async function predict() {
   var text = document.getElementById('text').value;
