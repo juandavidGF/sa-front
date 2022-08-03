@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30%;
+}
+
+p {
+  margin-top: 15%;
+}
+
+#text {
+  margin-bottom: 10px;
+  width: 100%;
+  /* width: 400px; */
+}
+
+button {
+  width: 150px;
+}
+
+#prediction {
+  margin-top: 20px;
+}
