@@ -25,6 +25,7 @@ async function predict() {
 
     // console.log(data);
   } catch (error) {
+    document.getElementById('prediction').innerText = "There was a error";
     console.log(error);
   }
 }
