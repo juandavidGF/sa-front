@@ -10,9 +10,10 @@ async function predict() {
                   }
   try {
     document.getElementById('prediction').innerText = "Processing ...";
-    const response = await fetch(url+encodeURIComponent(text), {
-        method : "GET",
-        headers: headers
+    const response = await fetch(url, {
+        method : "POST",
+        headers: headers,
+				body: JSON.stringify(text)
     });
     // console.log("response.headers: ", response.headers);
     // console.log("response.text: ", response.text());
