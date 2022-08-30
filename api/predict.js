@@ -10,8 +10,8 @@ export default async function handler(req, res) {
 			// 	"prediction": 0.2301264852285385,
 			// 	"success": true
 			// }
-			console.log(req.body)
-			res.status(200).json(req.body);
+			console.log(req.body.text)
+			res.status(200).json(req.body.text);
 		} catch (e) {
 			console.log(e);
 			res.status(500).json(e);
