@@ -3,7 +3,7 @@ const https = require('https');
 export default async function handler(req, res) {
 	if (req.method === 'POST') {
 		try {
-			https.get("http://3.234.151.75:5555/predict?msg=", (resp) => {
+			https.request("http://3.234.151.75:5555/predict?msg=", (resp) => {
 				console.log(resp)
 
 			})
