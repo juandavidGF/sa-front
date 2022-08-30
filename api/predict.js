@@ -1,7 +1,5 @@
 const axios = require('axios').default;
 
-const uri = http://3.234.151.75:5555/predict?msg=
-
 export default async function handler(req, res) {
 	if (req.method === 'GET') {
 		try {
