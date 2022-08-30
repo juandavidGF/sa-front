@@ -13,7 +13,7 @@ async function predict() {
     const response = await fetch(url, {
         method : "POST",
         headers: headers,
-				body: JSON.stringify(text)
+				body: text
     });
     // console.log("response.headers: ", response.headers);
     // console.log("response.text: ", response.text());
