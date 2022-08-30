@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 export default async function handler(req, res) {
 	if (req.method === 'POST') {
@@ -10,6 +10,8 @@ export default async function handler(req, res) {
 			// 	"prediction": 0.2301264852285385,
 			// 	"success": true
 			// }
+			var msj = req.body.text
+
 			console.log(req.body.text)
 			res.status(200).json(req.body.text);
 		} catch (e) {
