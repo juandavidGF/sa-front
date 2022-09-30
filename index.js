@@ -21,9 +21,9 @@ async function predict() {
 		const data = await response.json();
 		// console.log(data)
     if (data.prediction > 0.5) {
-      document.getElementById('prediction').innerText = "Sentimiento Positivo: " + data.prediction.toFixed(4);
+      document.getElementById('prediction').innerText = "Sentimiento Positivo 😄: " + data.prediction.toFixed(4);
     } else {
-      document.getElementById('prediction').innerText = "Sentimiento Negativo: " + data.prediction.toFixed(4);
+      document.getElementById('prediction').innerText = "Sentimiento Negativo 😔: " + data.prediction.toFixed(4);
     }
 
     // console.log(data);
