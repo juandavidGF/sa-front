@@ -1,4 +1,4 @@
-const url = '/api/predict';
+const url = 'http://3.234.151.75:5555/predict?msg=';
 
 async function predict() {
   var text = document.getElementById('text').value;
@@ -10,14 +10,16 @@ async function predict() {
                   }
   try {
     document.getElementById('prediction').innerText = "Processing ...";
-    const response = await fetch(url, {
-        method : "POST",
-        headers: headers,
-				body: JSON.stringify(text)
-    });
-    // console.log("response.headers: ", response.headers);
-    // console.log("response.text: ", response.text());
-    const data = await response.json();
+		const response = await fetch(url+text);
+    // const response = await fetch(url, {
+		//     method : "POST",
+		//     headers: headers,
+		// 		body: JSON.stringify(text)
+		// });
+		// console.log("response.headers: ", response.headers);
+		// console.log("response.text: ", response.text());
+		const data = await response.json();
+		console.log(data)
     if (data.prediction > 0.5) {
       document.getElementById('prediction').innerText = "Sentimiento Positivo: " + data.prediction.toFixed(4);
     } else {
