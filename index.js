@@ -19,7 +19,7 @@ async function predict() {
 		// console.log("response.headers: ", response.headers);
 		// console.log("response.text: ", response.text());
 		const data = await response.json();
-		console.log(data)
+		// console.log(data)
     if (data.prediction > 0.5) {
       document.getElementById('prediction').innerText = "Sentimiento Positivo: " + data.prediction.toFixed(4);
     } else {
@@ -29,6 +29,6 @@ async function predict() {
     // console.log(data);
   } catch (error) {
     document.getElementById('prediction').innerText = "There was an error";
-    console.log('err: ', error);
+    console.log(error);
   }
 }
