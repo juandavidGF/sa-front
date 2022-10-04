@@ -1,4 +1,4 @@
-const url = 'api/sa/predict?msg=';
+const url = '/api/sa/predict?msg=';
 
 async function predict() {
   var text = document.getElementById('text').value;
