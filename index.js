@@ -19,8 +19,8 @@ async function predict() {
 		// console.log("response.headers: ", response.headers);
 		// console.log("response.text: ", response.text());
 		const data = await response.json();
-		console.log(url)
-		console.log(data)
+		// console.log(url)
+		// console.log(data)
     if (data.prediction > 0.5) {
       document.getElementById('prediction').innerText = "😄 Sentimiento Positivo: " + data.prediction.toFixed(4);
     } else {
