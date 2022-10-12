@@ -8,6 +8,7 @@ h1 {
   flex-direction: column;
   margin: auto;
   width: 30%;
+	min-width: 300px;
 }
 
 p {
@@ -26,4 +27,10 @@ button {
 
 #prediction {
   margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+		width: 400px;
+  }
 }
